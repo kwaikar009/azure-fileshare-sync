@@ -1,0 +1,15 @@
+# Environment & secrets
+.env
+*.env
+secrets.json
+credentials.json
+
+# Azure CLI config
+.azure/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
