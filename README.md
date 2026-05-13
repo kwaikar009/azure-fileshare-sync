@@ -17,15 +17,15 @@ The architecture implements strict network segmentation by separating applicatio
 ![Architecture Diagram](architecture.png)
 
 The solution is built using a two-tier architecture:
-  * Application Tier: OwnCloud hosted on an Ubuntu VM in a public subnet
-  * Database Tier: MySQL hosted on an Ubuntu VM in a private subnet with no public exposure
+- **Application Tier:**: OwnCloud hosted on an Ubuntu VM in a public subnet
+- **Database Tier:**: MySQL hosted on an Ubuntu VM in a private subnet with no public exposure
     
 Key design principles:
 
-  * Network isolation between application and database layers
-  * Controlled access via NSGs
-  * Secure administrative access using bastion-style SSH pattern
-  * Outbound-only internet access for private resources via NAT Gateway
+  - Network isolation between application and database layers
+  - Controlled access via NSGs
+  - Secure administrative access using bastion-style SSH pattern
+  - Outbound-only internet access for private resources via NAT Gateway
 ---
 
 ## 🛠️ Azure Services Used
@@ -43,13 +43,13 @@ Key design principles:
 
 ---
 
-## 🛠️ Security Architecture
-  * Database tier deployed in a private subnet with no public IP
-  * NSG-based traffic filtering enforcing least-privilege access
-  * Bastion-style access using application VM as jump host
-  * NAT Gateway enables secure outbound-only internet access for private VM updates
-  * Direct internet access to database tier is fully eliminated
+## 🔐 Security Architecture
 
+- Database tier deployed in a private subnet with no public IP exposure  
+- NSG-based traffic filtering enforcing least-privilege access principles  
+- Bastion-style access using the application VM as a jump host  
+- NAT Gateway enabling secure outbound-only internet access for private VM updates  
+- Direct inbound internet access to the database tier is fully eliminated  
 ---
 
 ## 🔁 High-Level Traffic Flow
@@ -125,7 +125,7 @@ Database Server → NAT Gateway → Internet (package updates, patches)
 
 ---
 
-## 📄 🚀 Future Improvements
+## 🚀 Future Improvements
 
 - Automate deployment using Terraform (Infrastructure as Code)
 - Replace MySQL VM with Azure Database for MySQL (managed service)
