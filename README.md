@@ -14,7 +14,7 @@ The architecture implements strict network segmentation by separating applicatio
 
 ## 📐 Architecture Overview
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](architecture-diagram.png)
 
 The solution is built using a two-tier architecture:
 - **Application Tier:**: OwnCloud hosted on an Ubuntu VM in a public subnet
